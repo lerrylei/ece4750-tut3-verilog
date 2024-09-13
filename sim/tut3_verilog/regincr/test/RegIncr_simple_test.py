@@ -55,3 +55,9 @@ def test_basic( cmdline_opts ):
   # set the input and verify the output of the registered incrementer.
   # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
+  t( 0x00, '?'  )
+  t( 0x13, 0x02 )
+  t( 0x27, 0x15 )
+  t( 0x00, 0x29 )
+  t( 0x00, 0x02 )
+  t( 0x00, 0x02 )

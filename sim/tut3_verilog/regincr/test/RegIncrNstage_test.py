@@ -28,7 +28,7 @@ def mk_test_vector_table( nstages, inputs ):
   for input_ in inputs:
     test_vector_table.append( [ input_, last_results.popleft() ] )
     last_results.append( b8( input_ + nstages, trunc_int=True ) )
-
+  
   return test_vector_table
 
 #-------------------------------------------------------------------------

@@ -256,8 +256,8 @@ module tut3_verilog_gcd_GcdUnitCtrl
 
     cs( 0, 0, a_x, 0, b_x, 0 );
     case ( state_reg )
-      //                             istream ostream a mux  a  b mux b
-      //                             rdy  val  sel    en sel   en
+      //                            istr ostr  a mux  a  b mx   b
+      //                            rdy  val    sel   en  sel   en
       STATE_IDLE:                cs( 1,   0,   a_ld,  1, b_ld, 1 );
       STATE_CALC: if ( do_swap ) cs( 0,   0,   a_b,   1, b_a,  1 );
              else if ( do_sub  ) cs( 0,   0,   a_sub, 1, b_x,  0 );
